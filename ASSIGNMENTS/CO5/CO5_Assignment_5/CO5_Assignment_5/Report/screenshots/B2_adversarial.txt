@@ -1,0 +1,33 @@
+========================================================================
+PREDICTION (recorded before execution)
+========================================================================
+1. Graph B will require far more search than Graph A.
+2. In Graph B, unsuccessful branches arise at the K4 vertices (6-9),
+   but only after vertices 0-5 have been coloured in every combination.
+3. Under input order, pruning on Graph B happens late (depth 6+).
+   Under saturation order, K4 is selected first, so the conflict is
+   met at depth 3-4 and the isolated vertices are never explored.
+
+========================================================================
+Graph A (path, easy)   n=10, k=3, edges=9
+========================================================================
+  order=input       colourable=True  nodes=11     candidates=15     rejected=5      backtracks=0      max_depth=10
+                      colouring=[0, 1, 0, 1, 0, 1, 0, 1, 0, 1] valid=True
+  order=saturation  colourable=True  nodes=11     candidates=15     rejected=5      backtracks=0      max_depth=10
+                      colouring=[1, 0, 1, 0, 1, 0, 1, 0, 1, 0] valid=True
+
+========================================================================
+Graph B (K4 + isolated, hard)   n=10, k=3, edges=6
+========================================================================
+  order=input       colourable=False nodes=12028  candidates=36084  rejected=24057  backtracks=12027  max_depth=9
+  order=saturation  colourable=False nodes=16     candidates=48     rejected=33     backtracks=15     max_depth=3
+
+========================================================================
+COMPARISON (input order, the Part A algorithm)
+========================================================================
+  Search nodes : A=11     B=12028  ratio B/A = 1093.5
+  Backtracks   : A=0      B=12027 
+  Rejected     : A=5      B=24057 
+
+Prediction check: Graph B needed more search than Graph A -> CONFIRMED.
+Late pruning check: Graph B max depth = 9 (conflict only met after 6 free vertices).

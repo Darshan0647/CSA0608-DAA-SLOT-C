@@ -1,0 +1,33 @@
+==============================================================================
+DEMO 1 - 10 workloads, capacity C = 10
+==============================================================================
+  Servers used: 4
+  Server   1: workloads=[7, 3]  used=10   remaining=0
+  Server   2: workloads=[6, 4]  used=10   remaining=0
+  Server   3: workloads=[5, 5]  used=10   remaining=0
+  Server   4: workloads=[4, 3, 2, 1]  used=10   remaining=0
+
+==============================================================================
+CHALLENGE (B4.2) - input where FFD is NOT optimal, C = 10
+==============================================================================
+  FFD trace: 4,4 -> server 1 (full at 8, a 3 cannot fit)
+             3,3,3 -> server 2 (load 9); last 3 -> server 3
+  Servers used: 3
+  Server   1: workloads=[4, 4]  used=8    remaining=2
+  Server   2: workloads=[3, 3, 3]  used=9    remaining=1
+  Server   3: workloads=[3]  used=3    remaining=7
+  Exact optimum: 2 servers (lower bound ceil(sum/C) = 2)
+  FFD optimal? False   Excess servers: 1
+  Optimal packing: {4,3,3} and {4,3,3}, each exactly 10
+
+==============================================================================
+PRODUCTION-SCALE RUN - 5,000 workloads, capacity C = 100
+==============================================================================
+  Workloads        : 5000
+  Total demand     : 153108
+  Servers used     : 1532
+  Lower bound      : 1532  (ceil(total demand / C))
+  Gap to bound     : 0 server(s)  (0.00% above the bound)
+  Unused capacity  : 92
+  Run time         : 81.56 ms
+  Workloads on first 3 servers: [2, 2, 2] items each

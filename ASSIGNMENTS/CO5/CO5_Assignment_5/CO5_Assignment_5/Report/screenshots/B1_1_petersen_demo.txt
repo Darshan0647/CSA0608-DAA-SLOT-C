@@ -1,0 +1,8 @@
+Petersen graph, k=3, order=input
+  colouring : [0, 1, 0, 1, 2, 1, 0, 2, 2, 1]
+  valid     : True
+  stats     : {'nodes': 11, 'candidates': 20, 'rejected': 10, 'backtracks': 0, 'max_depth': 10}
+Petersen graph, k=3, order=saturation
+  colouring : [0, 1, 0, 1, 2, 1, 0, 2, 2, 1]
+  valid     : True
+  stats     : {'nodes': 11, 'candidates': 20, 'rejected': 10, 'backtracks': 0, 'max_depth': 10}

@@ -1,0 +1,4 @@
+Counterexample instance (8 zones, 5 centres)
+  Exact  : {A, B}  size=2  subsets examined=6
+  Greedy : {C, A, B}  size=3  evaluations=15
+  Greedy is optimal? False

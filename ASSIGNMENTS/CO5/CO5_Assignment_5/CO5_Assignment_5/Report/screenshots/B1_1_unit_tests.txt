@@ -1,0 +1,15 @@
+
+[stderr]
+test_agrees_with_brute_force_on_random_graphs (__main__.TestGraphColouring.test_agrees_with_brute_force_on_random_graphs) ... ok
+test_boundary_empty_graph (__main__.TestGraphColouring.test_boundary_empty_graph) ... ok
+test_boundary_one_edge_one_colour (__main__.TestGraphColouring.test_boundary_one_edge_one_colour) ... ok
+test_boundary_single_vertex_one_colour (__main__.TestGraphColouring.test_boundary_single_vertex_one_colour) ... ok
+test_colourable_petersen_k3 (__main__.TestGraphColouring.test_colourable_petersen_k3) ... ok
+test_invalid_inputs_rejected (__main__.TestGraphColouring.test_invalid_inputs_rejected) ... ok
+test_odd_cycle_needs_three (__main__.TestGraphColouring.test_odd_cycle_needs_three) ... ok
+test_uncolourable_k4_k3 (__main__.TestGraphColouring.test_uncolourable_k4_k3) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.012s
+
+OK

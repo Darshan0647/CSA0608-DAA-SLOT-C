@@ -1,0 +1,24 @@
+B3.1 - Correctness on three small (random, unselected) instances
+--------------------------------------------------------------------------------------
+Instance   Zones Centres  Exact size  Greedy size   Same?   Exact cover / Greedy cover
+--------------------------------------------------------------------------------------
+S1             8       7           2            2     yes   {C1, C6} / {C6, C1}
+S2            10       8           4            4     yes   {C1, C2, C4, C5} / {C4, C1, C2, C5}
+S3            12       9           3            3     yes   {C1, C2, C6} / {C6, C1, C2}
+
+B3.3 - Scalability (effort counted, not timed)
+--------------------------------------------------------------------------------------
+ Zones  Centres  Exact effort     2^centres  Greedy effort  Exact cover  Greedy cover
+--------------------------------------------------------------------------------------
+    10        8            52           256             24            3             3
+    12       10           179         1,024             40            4             4
+    14       12            91         4,096             36            3             3
+    16       14         2,963        16,384             70            5             5
+    18       16         1,577        65,536             64            4             4
+    20       18         1,814       262,144             72            4             4
+    22       20           366     1,048,576             80            3             4
+    24       22         4,007     4,194,304             88            4             4
+    26       24           908    16,777,216             72            3             3
+
+Exact effort = subsets examined before the first cover of minimum size is found.
+2^centres = worst-case number of subsets (exact search with no early stop).
